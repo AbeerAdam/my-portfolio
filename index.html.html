@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مطور Full-stack محترف، أجمع بين قوة الأنظمة الخلفية وجمال الواجهات الأمامية لخلق تجربة رقمية لا تُنسى.">
+    
+    <title>Abeer Adam</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-cyan': '#00F2FE',
+                        'neon-purple': '#7C3AED',
+                        'dark-bg': '#080808',
+                        'dark-card': '#111111',
+                        'brand-blue': '#1D4ED8', 
+                        'light-bg': '#F8FAFC',
+                        'light-card': '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Cairo', sans-serif; transition: all 0.4s ease; }
+        
+        /* تأثيرات الحركة والنيون */
+        .neon-text { text-shadow: 0 0 10px rgba(0, 242, 254, 0.5); }
+        .dark .neon-glow:hover { box-shadow: 0 0 20px rgba(0, 242, 254, 0.3); border-color: #00F2FE; }
+        .light .soft-glow:hover { box-shadow: 0 10px 20px rgba(29, 78, 216, 0.1); border-color: #1D4ED8; }
+
+        /* سويتش الثيم */
+        .theme-switch { width: 60px; height: 30px; background: #1e1e1e; border-radius: 50px; position: relative; cursor: pointer; border: 1px solid rgba(255,255,255,0.1); }
+        .light .theme-switch { background: #CBD5E1; border-color: #94A3B8; }
+        .switch-dot { width: 22px; height: 22px; background: #00F2FE; border-radius: 50%; position: absolute; top: 3px; left: 4px; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 0 10px #00F2FE; }
+        .light .switch-dot { transform: translateX(30px); background: #1D4ED8; box-shadow: 0 0 10px rgba(29, 78, 216, 0.4); }
+
+        /* هالات خلفية */
+        .blob { position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.1; z-index: 0; pointer-events: none; }
+    </style>
+</head>
+<body class="dark:bg-dark-bg bg-light-bg dark:text-gray-100 text-slate-900 antialiased overflow-x-hidden">
+
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-lg border-b dark:border-white/5 border-black/5 bg-opacity-90 transition-all">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-black tracking-tighter">
+                <span class="text-neon-cyan dark:text-neon-cyan light:text-brand-blue">[</span>  Abeer Adam  <span class="text-neon-cyan dark:text-neon-cyan light:text-brand-blue">]</span>
+            </div>
+            
+            <div class="flex items-center gap-6">
+                <div class="hidden md:flex gap-8 font-bold text-sm">
+                    <a href="#skills" class="hover:text-neon-cyan dark:hover:text-neon-cyan light:hover:text-brand-blue transition">المهارات</a>
+                    <a href="#projects" class="hover:text-neon-cyan dark:hover:text-neon-cyan light:hover:text-brand-blue transition">الأعمال</a>
+                    <a href="#contact" class="hover:text-neon-cyan dark:hover:text-neon-cyan light:hover:text-brand-blue transition">تواصل</a>
+                </div>
+                <div class="theme-switch" onclick="toggleTheme()">
+                    <div class="switch-dot"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative min-h-screen flex flex-col items-center justify-center px-6 text-center overflow-hidden">
+        <div class="blob w-[400px] h-[400px] bg-neon-cyan top-0 right-0"></div>
+        <div class="blob w-[400px] h-[400px] bg-neon-purple bottom-0 left-0"></div>
+
+        <div class="relative z-10" data-aos="zoom-out" data-aos-duration="1200">
+            <h1 class="text-5xl md:text-8xl font-black mb-6 tracking-tight leading-tight">
+                أصمم كوداً <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r dark:from-neon-cyan dark:to-neon-purple from-blue-700 to-indigo-600">
+                    ينبض بالحياة
+                </span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-500 dark:text-gray-400 font-medium mb-12">
+                مطور Full-stack محترف، أجمع بين قوة الأنظمة الخلفية وجمال الواجهات الأمامية لخلق تجربة رقمية لا تُنسى.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#projects" class="px-10 py-4 bg-neon-cyan dark:bg-neon-cyan light:bg-brand-blue dark:text-black text-white font-black rounded-2xl shadow-xl hover:scale-105 transition-all active:scale-95">مشاهدة أعمالي</a>
+                <a href="AbeerAdamCV.pdf" download class="px-10 py-4 bg-neon-cyan dark:bg-neon-cyan light:bg-brand-blue dark:text-black text-white font-black rounded-2xl shadow-xl hover:scale-105 transition-all active:scale-95">تحميل سيرتي الذاتية</a>
+                <a href="#contact" class="px-10 py-4 border-2 dark:border-white/10 border-black/10 rounded-2xl font-bold hover:bg-white/5 transition-all">ابدأ مشروعك</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="skills" class="py-32 px-6 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">ترسانتي التقنية</h2>
+                <div class="h-1.5 w-24 bg-neon-cyan mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
+                <div class="dark:bg-dark-card bg-white p-8 rounded-3xl border dark:border-white/5 border-gray-200 text-center transition-all duration-300 neon-glow soft-glow group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">⚛️</div>
+                    <p class="font-bold text-lg">React.js</p>
+                </div>
+                <div class="dark:bg-dark-card bg-white p-8 rounded-3xl border dark:border-white/5 border-gray-200 text-center transition-all duration-300 neon-glow soft-glow group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🚀</div>
+                    <p class="font-bold text-lg">Next.js</p>
+                </div>
+                <div class="dark:bg-dark-card bg-white p-8 rounded-3xl border dark:border-white/5 border-gray-200 text-center transition-all duration-300 neon-glow soft-glow group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🎨</div>
+                    <p class="font-bold text-lg">Tailwind</p>
+                </div>
+                <div class="dark:bg-dark-card bg-white p-8 rounded-3xl border dark:border-white/5 border-gray-200 text-center transition-all duration-300 neon-glow soft-glow group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🟢</div>
+                    <p class="font-bold text-lg">Node.js</p>
+                </div>
+                <div class="dark:bg-dark-card bg-white p-8 rounded-3xl border dark:border-white/5 border-gray-200 text-center transition-all duration-300 neon-glow soft-glow group" data-aos="fade-up" data-aos-delay="500">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🟦</div>
+                    <p class="font-bold text-lg">TS</p>
+                </div>
+                <div class="dark:bg-dark-card bg-white p-8 rounded-3xl border dark:border-white/5 border-gray-200 text-center transition-all duration-300 neon-glow soft-glow group" data-aos="fade-up" data-aos-delay="600">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform">🗄️</div>
+                    <p class="font-bold text-lg">PostgreSQL</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-32 px-6 bg-gray-50/50 dark:bg-black/20">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-black mb-16 text-center" data-aos="fade-up">مشاريع متميزة</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="group dark:bg-dark-card bg-white rounded-[2.5rem] overflow-hidden border dark:border-white/5 border-gray-200 shadow-sm hover:shadow-2xl transition-all duration-500" data-aos="fade-up">
+                    <div class="relative h-72 overflow-hidden bg-gray-200 dark:bg-gray-800">
+                        <img src="https://via.placeholder.com/800x500/1D4ED8/ffffff?text=E-commerce+UI" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                            <span class="text-white font-bold">عرض التفاصيل</span>
+                        </div>
+                    </div>
+                    <div class="p-10">
+                        <div class="flex gap-2 mb-4">
+                            <span class="text-[10px] font-black bg-blue-100 dark:bg-neon-cyan/10 text-blue-700 dark:text-neon-cyan px-3 py-1 rounded-full uppercase tracking-widest">Mobile App</span>
+                        </div>
+                        <h3 class="text-3xl font-black mb-4 tracking-tight">منصة التجارة الذكية</h3>
+                        <p class="text-gray-500 dark:text-gray-400 mb-8 leading-relaxed">تطبيق متكامل مبني بـ Drat مع سرعة فائقة ونظام دفع آمن وتجربة مستخدم ذكية.</p>
+                        <a href="#" class="font-black dark:text-neon-cyan text-brand-blue flex items-center gap-2 group/link">
+                            معاينة حية <span class="group-hover:translate-x-[-5px] transition-transform">←</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group dark:bg-dark-card bg-white rounded-[2.5rem] overflow-hidden border dark:border-white/5 border-gray-200 shadow-sm hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-72 overflow-hidden bg-gray-200 dark:bg-gray-800">
+                        <img src="https://via.placeholder.com/800x500/7C3AED/ffffff?text=Task+Manager" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
+                            <span class="text-white font-bold">عرض التفاصيل</span>
+                        </div>
+                    </div>
+                    <div class="p-10">
+                        <div class="flex gap-2 mb-4">
+                            <span class="text-[10px] font-black bg-purple-100 dark:bg-neon-purple/10 text-purple-700 dark:text-neon-purple px-3 py-1 rounded-full uppercase tracking-widest">Software</span>
+                        </div>
+                        <h3 class="text-3xl font-black mb-4 tracking-tight">نظام إدارة الإنتاجية</h3>
+                        <p class="text-gray-500 dark:text-gray-400 mb-8 leading-relaxed">لوحة تحكم تفاعلية لمراقبة المهام والفرق البرمجية مع إشعارات فورية ورسوم بيانية.</p>
+                        <a href="#" class="font-black dark:text-neon-cyan text-brand-blue flex items-center gap-2 group/link">
+                            معاينة حية <span class="group-hover:translate-x-[-5px] transition-transform">←</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-32 text-center relative border-t dark:border-white/5 border-gray-200 overflow-hidden">
+        <div class="blob w-64 h-64 bg-neon-purple opacity-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="relative z-10" data-aos="fade-up">
+            <h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight">جاهز لنقل مشروعك <br> للمستوى التالي؟</h2>
+            <a href="mailto:contact@yourname.com" class="text-2xl md:text-4xl font-black dark:text-neon-cyan text-brand-blue hover:underline">adamabeer58@gmail.com</a>
+            <div class="mt-20 text-gray-400 text-xs font-bold uppercase tracking-widest">
+                صُمم بواسطة Abeer Adam &copy; 2026
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true, easing: 'ease-out-quart' });
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            if (html.classList.contains('dark')) {
+                html.classList.replace('dark', 'light');
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.replace('light', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        if (localStorage.theme === 'light') {
+            document.documentElement.classList.replace('dark', 'light');
+        }
+    </script>
+</body>
+</html>
