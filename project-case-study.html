@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دراسة حالة | منصة نكسوس للتجارة</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-cyan': '#00F2FE',
+                        'neon-purple': '#7C3AED',
+                        'dark-bg': '#050505',
+                        'dark-card': '#0F0F0F'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Cairo', sans-serif; background-color: #050505; color: white; }
+        
+        /* أنميشن مخصص للنصوص */
+        .reveal-text {
+            background: linear-gradient(to right, #ffffff 50%, #444 50%);
+            background-size: 200% 100%;
+            background-position: 100% 0;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: background-position 1s ease-out;
+        }
+        .aos-animate .reveal-text { background-position: 0 0; }
+
+        /* تأثير الخطوط النيونية المتحركة */
+        .neon-line {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00F2FE, transparent);
+            width: 0;
+            transition: width 1.5s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+        .aos-animate .neon-line { width: 100%; }
+
+        /* زجاجي (Glassmorphism) */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <nav class="fixed top-0 w-full z-50 p-6 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="group flex items-center gap-3 font-bold text-gray-400 hover:text-white transition">
+                <span class="group-hover:-translate-x-2 transition-transform">→</span> العودة للمشاريع
+            </a>
+            <div class="h-1 w-12 bg-neon-cyan rounded-full"></div>
+        </div>
+    </nav>
+
+    <header class="min-h-screen flex flex-col items-center justify-center pt-20 px-6">
+        <div class="text-center space-y-6 max-w-4xl">
+            <p class="text-neon-cyan font-black tracking-[0.2em] uppercase text-xs" data-aos="fade-down">دراسة حالة برمجية</p>
+            <h1 class="text-5xl md:text-8xl font-black leading-tight reveal-text" data-aos="fade-up">
+                منصة نكسوس <br> <span class="text-neon-purple">للتجارة الذكية</span>
+            </h1>
+            <div class="neon-line mx-auto mt-8" data-aos="custom"></div>
+        </div>
+
+        <div class="mt-20 w-full max-w-6xl shadow-[0_50px_100px_-20px_rgba(0,242,254,0.15)] rounded-[2.5rem] overflow-hidden border border-white/5" data-aos="zoom-in-up" data-aos-duration="1500">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2426" alt="Project Preview" class="w-full">
+        </div>
+    </header>
+
+    <section class="py-32 px-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
+        <div class="md:col-span-2 space-y-8" data-aos="fade-right">
+            <h2 class="text-3xl font-black underline decoration-neon-cyan decoration-4 underline-offset-8">عن المشروع</h2>
+            <p class="text-xl text-gray-400 leading-relaxed">
+                واجه العميل مشكلة في بطء استجابة متجره الحالي وفقدان العملاء أثناء عملية الدفع. كان الهدف هو بناء منصة 
+                <span class="text-white font-bold">بسرعة خارقة</span>، واجهة مستخدم نيونية جذابة، ونظام إدارة مخزون فوري يعمل بالوقت الفعلي.
+            </p>
+        </div>
+        <div class="glass-card p-8 rounded-3xl space-y-6" data-aos="fade-left">
+            <div>
+                <p class="text-gray-500 text-sm font-bold uppercase mb-1">التقنيات</p>
+                <p class="text-neon-cyan">Next.js 14, Tailwind, Prisma</p>
+            </div>
+            <div>
+                <p class="text-gray-500 text-sm font-bold uppercase mb-1">الأداء</p>
+                <p class="text-green-400">99/100 Lighthouse Score</p>
+            </div>
+            <div>
+                <p class="text-gray-500 text-sm font-bold uppercase mb-1">التحدي الأكبر</p>
+                <p>مزامنة البيانات الفورية</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-dark-card relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="mb-16" data-aos="fade-up">
+                <span class="text-5xl">🧠</span>
+                <h2 class="text-4xl md:text-6xl font-black mt-6 mb-8 italic">التحدي البرمجي</h2>
+                <p class="text-gray-400 text-lg leading-relaxed border-r-4 border-neon-purple pr-8">
+                    "كيف نقوم بتحديث أسعار العملات والمخزون لآلاف المستخدمين في نفس اللحظة دون إعادة تحميل الصفحة أو إجهاد السيرفر؟"
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-gray-300">
+                <div class="space-y-4 p-8 border border-white/5 rounded-2xl hover:bg-white/5 transition" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-neon-cyan font-bold text-xl">المشكلة</h3>
+                    <p>كان النظام القديم يستخدم Request-Response التقليدي، مما أدى إلى تأخير بمقدار 5 ثوانٍ في تحديث الأسعار.</p>
+                </div>
+                <div class="space-y-4 p-8 border border-white/5 rounded-2xl hover:bg-white/5 transition" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-neon-purple font-bold text-xl">الحل التقني</h3>
+                    <p>تم دمج تقنية WebSockets مع نظام Cache متطور (Redis) لضمان وصول التحديثات في أقل من 100 ملي ثانية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 max-w-7xl mx-auto">
+        <h2 class="text-4xl font-black mb-16 text-center" data-aos="fade-up">النتيجة النهائية</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="rounded-3xl overflow-hidden h-[400px]" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1551288049-bbbda540d3b9?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+            </div>
+            <div class="rounded-3xl overflow-hidden h-[400px]" data-aos="fade-up" data-aos-delay="300">
+                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=1000" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700">
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-40 text-center bg-gradient-to-t from-neon-cyan/5 to-transparent border-t border-white/5">
+        <p class="text-gray-500 font-bold mb-6 tracking-widest" data-aos="fade-up">هل أعجبك العمل؟</p>
+        <a href="mailto:hi@yourname.com" class="text-3xl md:text-6xl font-black hover:text-neon-cyan transition-all" data-aos="zoom-in">لنتحدث عن مشروعك</a>
+        <div class="mt-20">
+            <a href="index.html" class="px-8 py-3 rounded-full border border-gray-700 hover:border-neon-cyan transition text-sm font-bold">المشروع التالي ←</a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            once: false, // نجعل الأنيمشن يتكرر عند التمرير للأعلى والأسفل لزيادة التفاعل
+            mirror: true
+        });
+    </script>
+</body>
+</html>
